@@ -45,7 +45,9 @@ source: https://forums.docker.com/t/cannot-connect-to-the-docker-daemon-is-the-d
 
 ## Set docker cloud in Jenkins
 管理 Jenkins > 組態設定，最下面 > 新增雲 docker
-uri tcp://YOUR_JENKINS_IP:2375
+uri `tcp://YOUR_JENKINS_IP:2375`
+進階
+Docker Hostname or IP address	 `http://YOUR_JENKINS_IP`
 
 # Warning
 If you use VM like `openstack`, open the port for your services.
