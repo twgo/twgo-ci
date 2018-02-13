@@ -38,7 +38,7 @@ ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375
 DOCKER_OPTS="-H tcp://0.0.0.0:2375"
 
 # restart
-sudo docker service restart
+sudo service docker start
 
 source: https://forums.docker.com/t/cannot-connect-to-the-docker-daemon-is-the-docker-daemon-running-on-this-host/8925/17
 ```
