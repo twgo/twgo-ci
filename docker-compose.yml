@@ -8,6 +8,8 @@ services:
       - '50000:50000'
     volumes:
       - 'jenkins_data:/jenkins'
+      - '/etc/timezone:/etc/timezone'
+      - '/etc/localtime:/etc/localtime'
 volumes:
   jenkins_data:
     driver: local
