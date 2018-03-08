@@ -54,7 +54,8 @@ Docker Hostname or IP address	 `http://YOUR_JENKINS_IP`
 configure > Branch to Build > Branch Specifier (blank for 'any')	
 
 ## Sync Timezone with docker
-run docker with `-v /etc/timezone:/etc/timezone -v /etc/localtime:/etc/localtime`
+run docker with `-v /etc/timezone:/etc/timezone -v /etc/localtime:/etc/localtime`  
+Check it on http://your-jenkins/systemInfo
 
 # Warning
 - use new branch name: Dokcer will use cache if you didn't edit your dockerfile/ docker-compose, be sure you didn't change your clone repo, use new branch name is better.
