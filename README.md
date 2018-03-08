@@ -49,6 +49,10 @@ uri `tcp://YOUR_JENKINS_IP:2375`
 進階
 Docker Hostname or IP address	 `http://YOUR_JENKINS_IP`
 
+## Let 
+佇組態的原始碼管理的Branches to build
+configure > Branch to Build > Branch Specifier (blank for 'any')	
+
 # Warning
 - use new branch name: Dokcer will use cache if you didn't edit your dockerfile/ docker-compose, be sure you didn't change your clone repo, use new branch name is better.
 - If you use VM like `openstack`, open the port for your services.
