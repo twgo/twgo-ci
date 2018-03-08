@@ -1,5 +1,5 @@
 # twgo-ci
-CI codes
+Jenkins CI setting for continuous experiment
 
 # What?
 Use Jenkins to run dockerfile in docker
