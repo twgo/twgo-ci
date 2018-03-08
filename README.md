@@ -49,9 +49,12 @@ uri `tcp://YOUR_JENKINS_IP:2375`
 進階
 Docker Hostname or IP address	 `http://YOUR_JENKINS_IP`
 
-## Let 
+## Let All Auto-build
 佇組態的原始碼管理的Branches to build
 configure > Branch to Build > Branch Specifier (blank for 'any')	
+
+## Sync Timezone with docker
+run docker with `-v /etc/timezone:/etc/timezone -v /etc/localtime:/etc/localtime`
 
 # Warning
 - use new branch name: Dokcer will use cache if you didn't edit your dockerfile/ docker-compose, be sure you didn't change your clone repo, use new branch name is better.
