@@ -7,6 +7,11 @@ Use Jenkins to run dockerfile in docker
 # Install
 install docker and docker-compose
 
+or
+
+run from the origin 
+https://github.com/jenkinsci/docker
+
 # Usage
 ## Run Jenkins
 `docker-compose up`
@@ -24,7 +29,7 @@ Will launch Jenkins with port 80
 ## Create a new admin user
 
 ## install Jenkins Plugin
-Docker plugin
+Docker (plugin https://plugins.jenkins.io/docker-plugin )
 
 ## Set docker
 ```
