@@ -15,6 +15,15 @@ docker run --name myjenkins -p 8080:8080 -p 50000:50000 --env JAVA_OPTS=-Dhudson
 ```
 https://github.com/jenkinsci/docker
 
+## make user own docker 
+
+Try running
+
+```
+sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+sudo chmod g+rwx "/home/$USER/.docker" -R
+```
+$USER is the username of the currently logged in user.
 # Usage
 ## Run Jenkins
 `docker-compose up`
