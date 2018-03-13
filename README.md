@@ -11,7 +11,7 @@ or
 
 run from the origin 
 ```
-docker run --name myjenkins -p 8080:8080 -p 50000:50000 --env JAVA_OPTS=-Dhudson.timezone=Asia/Taipei jenkins/jenkins:lts
+docker run -d --name myjenkins -p 80:8080 -p 50000:50000 --env JAVA_OPTS=-Dhudson.timezone=Asia/Taipei jenkins/jenkins:lts
 ```
 https://github.com/jenkinsci/docker
 
