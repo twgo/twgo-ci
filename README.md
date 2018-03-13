@@ -45,20 +45,18 @@ Docker (plugin https://plugins.jenkins.io/docker-plugin )
 
 ## Set docker
 ```
-https://unix.stackexchange.com/questions/411013/connecting-to-a-docker-host/411018
+ubuntu 16.04
+Inside file /lib/systemd/system/docker.service change:
+ExecStart=/usr/bin/dockerd -H fd:// -H tcp://0.0.0.0:2375
 
-# /lib/systemd/system/docker.service
+and run:
 
-ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375
-
-# /etc/default/docker
-DOCKER_OPTS="-H tcp://0.0.0.0:2375"
-
-# restart
-sudo service docker start
-
-source: https://forums.docker.com/t/cannot-connect-to-the-docker-daemon-is-the-docker-daemon-running-on-this-host/8925/17
+pkill docker
+systemctl daemon-reload
+systemctl start docker.service
+docker-compose up
 ```
+ref: https://github.com/portainer/portainer/issues/460
 
 ## Set docker cloud in Jenkins
 管理 Jenkins > 組態設定，最下面 > 新增雲 docker
