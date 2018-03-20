@@ -72,6 +72,16 @@ configure > Branch to Build > Branch Specifier (blank for 'any')
 run docker with `-v /etc/timezone:/etc/timezone -v /etc/localtime:/etc/localtime`  
 Check it on http://your-jenkins/systemInfo
 
+# Self-host docker image
+## launch registery server
+```
+docker run -d -p 5000:5000 --restart=always --name registry registry:2
+```
+## 'client' setting (which use docker pull)
+```
+# /etc/docker/daemon.json
+ { "insecure-registries":["myregistry.example.com:5000"] }  
+```
 # Warning
 - use new branch name: Dokcer will use cache if you didn't edit your dockerfile/ docker-compose, be sure you didn't change your clone repo, use new branch name is better.
 - If you use VM like `openstack`, open the port for your services.
