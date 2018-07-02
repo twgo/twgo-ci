@@ -9,13 +9,13 @@ install docker and docker-compose
 
 or
 
-run from the origin 
+run from the origin
 ```
-docker run -d --name myjenkins -p 80:8080 -p 50000:50000 --env JAVA_OPTS=-Dhudson.timezone=Asia/Taipei jenkins/jenkins:lts
+docker run -d --restart=always --name myjenkins -p 80:8080 -p 50000:50000 --env JAVA_OPTS=-Dhudson.timezone=Asia/Taipei jenkins/jenkins:lts
 ```
 https://github.com/jenkinsci/docker
 
-## make user own docker 
+## make user own docker
 
 Try running
 
@@ -66,10 +66,10 @@ Docker Hostname or IP address	 `http://YOUR_JENKINS_IP`
 
 ## Let All Auto-build
 佇組態的原始碼管理的Branches to build
-configure > Branch to Build > Branch Specifier (blank for 'any')	
+configure > Branch to Build > Branch Specifier (blank for 'any')
 
 ## Sync Timezone with docker
-run docker with `-v /etc/timezone:/etc/timezone -v /etc/localtime:/etc/localtime`  
+run docker with `-v /etc/timezone:/etc/timezone -v /etc/localtime:/etc/localtime`
 Check it on http://your-jenkins/systemInfo
 
 # Self-host docker image
@@ -80,7 +80,7 @@ docker run -d -p 5000:5000 --restart=always --name registry registry:2
 ## 'client' setting (which use docker pull)
 ```
 # /etc/docker/daemon.json
- { "insecure-registries":["myregistry.example.com:5000"] }  
+ { "insecure-registries":["myregistry.example.com:5000"] }
 ```
 # Warning
 - use new branch name: Dokcer will use cache if you didn't edit your dockerfile/ docker-compose, be sure you didn't change your clone repo, use new branch name is better.
